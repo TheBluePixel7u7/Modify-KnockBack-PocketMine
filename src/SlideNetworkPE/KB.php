@@ -2,23 +2,18 @@
 
 namespace SlideNetworkPE;
 
-use pocketmine\plugin\PluginBase as SlideNetwork;
-use pocketmine\event\Listener as KB;
+use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
 // utils
 use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat as C;
 // player
 use pocketmine\Level;
 use pocketmine\Entity;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerQuitEvent;
-use pocketmine\Player;
-use pocketmine\math\Vector3; 
 
-
-class KB extends SlideNetwork implements KB{
+class KB extends PluginBase implements Listener{
 
 public function onEnable(){
 	$this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -50,8 +45,7 @@ $this->getLogger()->info("
 }
 
 		public function onDamage(EntityDamageEvent $ev){
-/**poooopppp  asjsjsjss $tru = $tbp->get("kb-modifier");
-       $p = $ev->getEntity();*/
+
      if($ev instanceof EntityDamageByEntityEvent){
        $ev->setKnockBack($this->slide->get("kb-number"));
 }
