@@ -1,6 +1,12 @@
 name: KBconfig_thebluepixel
 main: SlideNetworkPE\KB
 api: [2.0.0, 2.1.0, 3.0.0]
-version: 1.0
+version: 2.0
 author: TheBluePixel7u7
-description: Modify KnockBack yaaay
+description: Modify KnockBack Plugin
+commands:
+    knockback:
+        permissions: slidenetwork.knockback.over
+        description: "Setup command for configure the knockback."
+        default: op
+        aliases: [kb]
