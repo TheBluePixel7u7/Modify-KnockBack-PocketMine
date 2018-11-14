@@ -1,6 +1,6 @@
 name: ModifyKnockBack
 main: SlideNetworkPE\KB
-api: [2.0.0, 2.1.0, 3.0.0]
+api: [2.0.0, 2.1.0, 3.0.0-ALPHA7]
 version: 2.0
 author: TheBluePixel7u7
 description: Modify KnockBack Plugin
